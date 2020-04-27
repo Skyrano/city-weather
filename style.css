@@ -15,7 +15,6 @@ h2 { /*On définit le type h2 pour les texte situés dans les pages About et Con
     margin: auto; /*La marge automatique permet de centrer le tableau*/
     margin-bottom: 4vw; /*On met une marge personnalisée en haut en bas pour que les 2 tableaux ne se suivent pas directement*/
     margin-top: 2vw;
-    overflow: auto; /*On agrandit automatiquement la taille des tableaux si les données dépassent*/
     width: 50vw;
 }
 
@@ -24,20 +23,20 @@ h2 { /*On définit le type h2 pour les texte situés dans les pages About et Con
     margin-top: 8vw;
 }
 
-.showed { /*On définit une classe pour les éléments devant être affichés*/
-    display:normal
-}
-
-.hidden { /*On définit une classe pour les éléments devant être cachés*/
-    display: none
-}
-
 .noselect { /*On définit une classe pour les éléments ne devant pas pouvoir être sélectionnés, en déclarant les options possibles sur les navigateurs courants*/
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
     -moz-user-select: none; /* Ancienne version de Firefox */
     -ms-user-select: none; /* Internet Explorer ou Edge */
     user-select: none; /* Version par défaut, actuellement utilisée par Chrome, Opera et Firefox */
+}
+
+.showed { /*On définit une classe pour les éléments devant être affichés*/
+    display:normal
+}
+
+.hidden { /*On définit une classe pour les éléments devant être cachés*/
+    display: none
 }
 
 tr:hover { /*On définit le comportement des lignes lorsque l'on passe dessus avec la souris pour que celles-ci changent de couleur*/
@@ -49,20 +48,20 @@ td { /*On définit une taille par défaut pour les cases des tableaux*/
     width: 10vw;
     height: 2vw;
 }
+
 .footer { /*On définit le style pour le pied de page*/
     position: fixed; /*On fixe la barre en bas*/
     left: 0;
     bottom: 0;
-    width: 100%;       /*Sur toute la longueur*/
+    width: 100%; /*Sur toute la longueur*/
     background-color: cornflowerblue;
     color: white;
-    text-align:center  /*Et on met le texte au milieu*/
+    text-align: center; /*Et on met le texte au milieu*/
 }
 
 
 .topnav { /*On définit le style de la barre de navigation*/
     background-color: cornflowerblue;
-    overflow: hidden;
     position: fixed; /*On fixe la barre en haut sur toute la longueur*/
     left: 0;
     top: 0;
@@ -72,7 +71,7 @@ td { /*On définit une taille par défaut pour les cases des tableaux*/
     .topnav .titre { /*On définit le style du titre du site que l'on met sur la droite de la barre*/
         color: lightgray;
         text-align: right;
-        font-size: 3vw;
+        font-size: 3vh;
         margin-right: 1vw;
         margin-top: 0.3vw;
     }
@@ -83,7 +82,7 @@ td { /*On définit une taille par défaut pour les cases des tableaux*/
         text-align: center;
         padding: 1vw 3vw;
         text-decoration: none; /*On enlève le soulignage habituel des liens*/
-        font-size: 2vw;
+        font-size: 2vh;
     }
 
         .topnav a:hover { /*On définit le style des onglets lorsque l'on passe dessus avec la souris*/
