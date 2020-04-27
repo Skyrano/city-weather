@@ -1,0 +1,62 @@
+﻿<!--Programmé par Alistair Rameau-->
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+    <title>City Weather</title>   <!--On définit les paramètres globaux de la page-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <!--On affichera le contenu de la page en fonction de la largeur de l'appareil-->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="icon.png" />
+    <script type="text/javascript" src="script.js"></script> <!--On charge le fichier contenant les fonction en JS-->
+</head>
+<body>
+    <div class="topnav noselect">   <!--On créé une barre de navigation en haut de la page-->
+            <a id="homebar" class="active" href="#home" onclick="changeToHome()">Home</a>  <!--Composée de 3 boutons qui affichent et cachent les éléments de la page afin de n'afficher que la catégorie voulue-->
+            <a id="contactbar" class="wait" href="#contact" onclick="changeToContact()">Contact</a>
+            <a id="aboutbar" class="wait" href="#about" onclick="changeToAbout()">About</a>
+        <div class="titre">City Weather</div>  <!--Avec un titre situé à droite de la barre-->
+    </div>
+    <div class="main">   <!--On créé la partie qui affichera la météo au centre de la page-->
+        <div id="meteo" class="showed noselect">   <!--A l'ouverture c'est cette partie qui est affichée, et tous ses éléments sont non-sélectionnables pour la visibilité-->
+            <form>  <!--On créé la barre dans laquelle l'utilisateur rentre le nom de la ville dont il veut la météo-->
+                <p><label for="ville"> Votre ville</label> : <input id="ville" type="text" name="Ville" maxlength="45" placeholder=" ex : Nantes" /></p> <!--on met la barre de texte avec une longeur de 45 caractères au maximum-->
+            </form>
+            <input type="button" value="Récupérer les infos" onclick="sendRequest()" /> <!--On lance la demande pour récupérer les infos de la ville donnée-->
+            <table class="meteo-displayer"> <!--Table contenant les informations sur la météo actuelle, qui est cachée tant que les information ne sont pas récupérées-->
+                <tr id="cityline" class="hidden"><td>Ville</td> <td id="city"></td><td id="flag"></td></tr> <!--La table est composée de 8 lignes et 3 colonnes-->
+                <tr id="weatherline" class="hidden"><td>Temps</td> <td id="weather"></td><td id="wicon"></td></tr>
+                <tr id="templine" class="hidden" onclick="displayMore()"><td>Température</td> <td id="temp"></td> <td id="displaymessage">Afficher plus</td></tr> <!--Cette ligne est cliquable pour afficher plus d'éléments-->
+                <tr id="feelline" class="hidden"><td>Température ressentie</td> <td id="feel"></td></tr>
+                <tr id="humiline" class="hidden"><td>Humidité</td> <td id="humidity"></td></tr>
+                <tr id="pressline" class="hidden"><td>Pression</td> <td id="pressure"></td></tr>
+                <tr id="tminline" class="hidden"><td>Tmin</td> <td id="tmin"></td></tr>
+                <tr id="tmaxline" class="hidden"><td>Tmax</td> <td id="tmax"></td></tr>
+            </table>
+            <table class="meteo-displayer"> <!--Table contenant les informations sur la météo prévue dans les prochaines heures, la première ligne cliquable pour afficher ou cacher le tableau (qui est caché par défaut)-->
+                <tr id="forecastline" class="hidden"><td id="messageforecast" onclick="displayForecast()" colspan="3">Afficher la prévision pour les prochaines heures</td></tr><!--La table est aussi composée de 8 lignes et 3 colonnes-->
+                <tr id="foreweatherline" class="hidden"><td>Temps</td> <td id="foreweather"></td><td id="forewicon"></td></tr>
+                <tr id="foretempline" class="hidden" onclick="displayMoreForecast()"><td>Température</td> <td id="foretemp"></td> <td id="foredisplaymessage">Afficher plus</td></tr>  <!--Cette ligne est cliquable pour afficher plus d'éléments-->
+                <tr id="forefeelline" class="hidden"><td>Température ressentie</td> <td id="forefeel"></td></tr>
+                <tr id="forehumiline" class="hidden"><td>Humidité</td> <td id="forehumidity"></td></tr>
+                <tr id="forepressline" class="hidden"><td>Pression</td> <td id="forepressure"></td></tr>
+                <tr id="foretminline" class="hidden"><td>Tmin</td> <td id="foretmin"></td></tr>
+                <tr id="foretmaxline" class="hidden"><td>Tmax</td> <td id="foretmax"></td></tr>
+            </table>
+        </div>
+
+        <div id="contact" class="hidden"> <!--Page de contact contenant l'adresse mail, qui est cachée par défaut-->
+            <h2>Adresse mail : alistair-rameau@hotmail.fr</h2> <!--Il faudrait cacher l'adresse mail (par une fonction par exemple après l'appui d'un bouton) dans un vrai site et éviter une apparition en brut-->
+        </div>
+        <div id="about" class="hidden"><!--Page contenant un court descritpif de ce site, qui est cachée par défaut-->
+            <h2>Cette page web permet d'afficher les données météo d'une ville donnée. Celle-ci a été faite dans le cadre du cours de programmation web de l'ENSIBS.</h2>
+        </div>
+    </div>
+
+    
+     
+    <div class="footer noselect"><!--On fini par créer le pied de page-->
+        <p>Made by Alistair Rameau</p>
+    </div>
+</body>
+</html>

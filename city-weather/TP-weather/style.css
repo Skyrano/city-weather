@@ -1,0 +1,97 @@
+﻿/*Programmé par Alistair Rameau*/
+
+body{/*On défini une police par défaut et des police au cas ou la première ne soit pas utilisable*/
+    font-family: Geneva, Arial, sans-serif
+}
+
+h2 { /*On définit le type h2 pour les texte situés dans les pages About et Contact*/
+    margin-top: 4vw;  /*On définira les valeurs de tous les styles en fonction de l'unité de largeur de la page pour adapter l'affichage à l'appareil*/
+    color: black;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.meteo-displayer { /*On définit le style pour les 2 tableaux affichant les données récupérées */
+    margin: auto; /*La marge automatique permet de centrer le tableau*/
+    margin-bottom: 4vw; /*On met une marge personnalisée en haut en bas pour que les 2 tableaux ne se suivent pas directement*/
+    margin-top: 2vw;
+    overflow: auto; /*On agrandit automatiquement la taille des tableaux si les données dépassent*/
+    width: 50vw;
+}
+
+.main { /*On définit une classe pour les élements principaux et on ajoute une marge en haut*/
+    text-align: center;
+    margin-top: 8vw;
+}
+
+.showed { /*On définit une classe pour les éléments devant être affichés*/
+    display:normal
+}
+
+.hidden { /*On définit une classe pour les éléments devant être cachés*/
+    display: none
+}
+
+.noselect { /*On définit une classe pour les éléments ne devant pas pouvoir être sélectionnés, en déclarant les options possibles sur les navigateurs courants*/
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Ancienne version de Firefox */
+    -ms-user-select: none; /* Internet Explorer ou Edge */
+    user-select: none; /* Version par défaut, actuellement utilisée par Chrome, Opera et Firefox */
+}
+
+tr:hover { /*On définit le comportement des lignes lorsque l'on passe dessus avec la souris pour que celles-ci changent de couleur*/
+    background-color: cornflowerblue;
+    color: white;
+}
+
+td { /*On définit une taille par défaut pour les cases des tableaux*/
+    width: 10vw;
+    height: 2vw;
+}
+.footer { /*On définit le style pour le pied de page*/
+    position: fixed; /*On fixe la barre en bas*/
+    left: 0;
+    bottom: 0;
+    width: 100%;       /*Sur toute la longueur*/
+    background-color: cornflowerblue;
+    color: white;
+    text-align:center  /*Et on met le texte au milieu*/
+}
+
+
+.topnav { /*On définit le style de la barre de navigation*/
+    background-color: cornflowerblue;
+    overflow: hidden;
+    position: fixed; /*On fixe la barre en haut sur toute la longueur*/
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+    .topnav .titre { /*On définit le style du titre du site que l'on met sur la droite de la barre*/
+        color: lightgray;
+        text-align: right;
+        font-size: 3vw;
+        margin-right: 1vw;
+        margin-top: 0.3vw;
+    }
+
+    .topnav a { /*On définit le style par défaut des onglets de la barre de navigation*/
+        float: left; /*On colle la case du lien de navigation à gauche*/
+        color: lightgrey;
+        text-align: center;
+        padding: 1vw 3vw;
+        text-decoration: none; /*On enlève le soulignage habituel des liens*/
+        font-size: 2vw;
+    }
+
+        .topnav a:hover { /*On définit le style des onglets lorsque l'on passe dessus avec la souris*/
+            background-color: dodgerblue;
+            color: white;
+        }
+
+        .topnav a.active { /*On définit un style particulier pour l'onglet actif*/
+            background-color: lightblue;
+            color: white;
+        }
