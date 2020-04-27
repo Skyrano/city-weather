@@ -1,6 +1,0 @@
-C:\Users\Alistair\Documents\Travail\Web\city-weather\TP-weather\bin\TypeScriptHTMLApp1.dll.config
-C:\Users\Alistair\Documents\Travail\Web\city-weather\TP-weather\bin\TypeScriptHTMLApp1.dll
-C:\Users\Alistair\Documents\Travail\Web\city-weather\TP-weather\bin\TypeScriptHTMLApp1.pdb
-C:\Users\Alistair\Documents\Travail\Web\city-weather\TP-weather\obj\Release\TP-weather.csproj.CoreCompileInputs.cache
-C:\Users\Alistair\Documents\Travail\Web\city-weather\TP-weather\obj\Release\TypeScriptHTMLApp1.dll
-C:\Users\Alistair\Documents\Travail\Web\city-weather\TP-weather\obj\Release\TypeScriptHTMLApp1.pdb
